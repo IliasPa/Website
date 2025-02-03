@@ -1,1 +1,262 @@
-hiffgs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for responsive web design, ensures proper scaling on mobile devices -->
+    <title>Home - Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="logo1'.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css" />
+</head>
+<body>
+    <!-- Main header with logo and company name -->
+    <header>
+        <a href="index.html"><img src="logo2'.png" alt="Logo" class="logo"></a>
+        <div class="company-name">
+            <span class="prin">Prin</span><span class="em">em</span>
+            <span class="print">Print</span>
+            <span class="them">them</span>
+        </div>
+        <div class="language-switcher">
+            <!-- <a href="#" class="underline-animation" data-lang="en">EN</a> | <a href="#" class="underline-animation" data-lang="gr">GR</a> -->
+            <a href="#" data-lang="en"><span class="fi fi-gb"></span></a> | 
+            <a href="#" data-lang="gr"><span class="fi fi-gr"></span></a>
+        </div>
+    </header>
+    
+    <!-- Main content -->
+    <main>
+        <section class="page-text">
+            <!-- <h1 class="page-title">Your partner in bringing your ideas to life.</h1> -->
+            <h1 class="page-title" data-lang-en="Print your Imagination" data-lang-gr="Εκτύπωσε τη Φαντασία σου">Print your Imagination</h1>
+            <p class="company-description" 
+            data-lang-en="
+            We offer complete 3D printing solutions using advanced technology to bring your ideas to life. Whether you need a single prototype or a full production run, we guide you in choosing the right materials, refining your designs, and adding the perfect finishing touches.
+            " 
+            data-lang-gr="
+            Προσφέρουμε ολοκληρωμένες λύσεις 3D εκτύπωσης χρησιμοποιώντας προηγμένη τεχνολογία για να ζωντανέψουμε τις ιδέες σας. Είτε χρειάζεστε ένα μόνο πρωτότυπο είτε μια πλήρη σειρά παραγωγής, σας βοηθάμε να επιλέξετε τα κατάλληλα υλικά, να βελτιώσετε τα σχέδιά σας και να προσθέσετε τις ιδανικές τελικές πινελιές.
+            ">
+            We offer complete 3D printing solutions using advanced technology to bring your ideas to life. Whether you need a single prototype or a full production run, we guide you in choosing the right materials, refining your designs, and adding the perfect finishing touches.
+         </p>        </section>
+        <div class="work-process">
+            <div class="work-step" data-info-en="Send your CAD file (in formats like STL, OBJ or STEP) or describe your idea." data-info-gr="Στείλτε το αρχείο CAD σας (σε μορφές όπως STL, OBJ ή STEP) ή περιγράψτε την ιδέα σας.">
+                <i class="fas fa-upload"></i>
+                <h3 data-lang-en="Upload Files" data-lang-gr="Ανεβάστε Αρχεία">Upload Files</h3>
+                <p data-lang-en="via email" data-lang-gr="μέσω email">via email</p>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="work-step" data-info-en="You'll also receive suggestions to make the print more cost-effective and of better quality." data-info-gr="Θα λάβετε επίσης προτάσεις για να κάνετε την εκτύπωση πιο οικονομική και καλύτερης ποιότητας.">
+                <i class="fas fa-dollar-sign"></i>
+                <h3 data-lang-en="Get Price" data-lang-gr="Λάβετε Τιμή">Get Price</h3>
+                <p data-lang-en="within 12 hours" data-lang-gr="εντός 12 ωρών">within 12 hours</p>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="work-step" data-info-en="We offer eco-friendly materials like PLA, which is biodegradable." data-info-gr="Προσφέρουμε φιλικά προς το περιβάλλον υλικά όπως το PLA, το οποίο είναι βιοδιασπώμενο.">
+                <i class="fas fa-print"></i>
+                <h3 data-lang-en="Printing" data-lang-gr="Εκτύπωση">Printing</h3>
+                <p data-lang-en="multicolour" data-lang-gr="πολύχρωμη">multicolour</p>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="work-step" data-info-en="Shipping costs will depend on your location.<br>We are located in Lefkada, Greece." data-info-gr="Τα έξοδα αποστολής θα εξαρτηθούν από την τοποθεσία σας.<br>Βρισκόμαστε στη Λευκάδα, Ελλάδα.">
+                <i class="fas fa-truck"></i>
+                <h3 data-lang-en="Delivery" data-lang-gr="Παράδοση">Delivery</h3>
+                <p data-lang-en="pick up available" data-lang-gr="διαθέσιμη παραλαβή">pick up available</p>
+            </div>
+        </div>
+        <div class="page-text">
+            <p data-lang-en="If you have any question about us, feel free to <a href='#footer' id='contact-link'>reach out to us directly!</a>" data-lang-gr="Αν έχετε οποιαδήποτε ερώτηση για εμάς, μη διστάσετε να <a href='#footer' id='contact-link'>επικοινωνήσετε μαζί μας απευθείας!</a>">If you have any question about us, feel free to <a href="#footer" id="contact-link">reach out to us directly!</a></p>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <section class="page-text">
+            <h1 class="page-title" data-lang-en="Selected Projects" data-lang-gr="Επιλεγμενα Εργα">Selected Projects</h1>
+        </section>
+        <section class="image-gallery">
+            <div class="gallery-item">
+                <img src="projects/image1.jpg" alt="Project 1" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image2.jpg" alt="Project 2" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image3.jpg" alt="Project 3" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image4.jpg" alt="Project 4" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image5.jpg" alt="Project 5" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image6.jpg" alt="Project 6" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image7.jpg" alt="Project 7" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image8.jpg" alt="Project 8" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image9.jpg" alt="Project 9" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image10.jpg" alt="Project 10" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image11.jpg" alt="Project 11" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="projects/image12.jpg" alt="Project 12" loading="lazy">
+            </div>
+        </section>
+    </main>
+
+    <!-- Contacts -->
+    <footer id="footer">
+        <h3 data-lang-en="Contact Us" data-lang-gr="Επικοινωνήστε μαζί μας">Contact Us</h3>
+        <div class="footer-contact">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <a href="tel:+00306980792814">+30 698 079 2814</a><br>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <a href="mailto:iliasparaskevas3@gmail.com">iliasparaskevas3@gmail.com</a><br>
+                </div>
+            </div>
+            <!-- <div class="contact-item">
+                <i class="fab fa-facebook"></i>
+                <div>
+                    <a href="https://facebook.com/printhem" target="_blank">Facebook</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-instagram"></i>
+                <div>
+                    <a href="https://instagram.com/prinem3d" target="_blank">Instagram</a>
+                </div>
+            </div> -->
+        </div>
+    </footer>
+    <p class="rights_reserved" data-lang-en="&copy; 2024 All Rights Reserved." data-lang-gr="&copy; 2024 Όλα τα δικαιώματα διατηρούνται.">&copy; 2024 All Rights Reserved.</p>
+    <script>
+        // Add event listener to open images in a modal when clicked
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const modal = document.createElement('div');
+        const modalImg = document.createElement('img');
+
+        modal.style.display = 'none';
+        modal.style.position = 'fixed';
+        modal.style.top = '50%';
+        modal.style.left = '50%';
+        modal.style.transform = 'translate(-50%, -50%) scale(0.1)';
+        modal.style.zIndex = '1000';
+        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        modal.style.padding = '10px';
+        modal.style.borderRadius = '8px';
+        modal.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+        modal.style.opacity = '0';
+
+        modalImg.style.maxWidth = '90vw';
+        modalImg.style.maxHeight = '90vh';
+
+        modal.appendChild(modalImg);
+        document.body.appendChild(modal);
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                modalImg.src = item.src;
+                modal.style.display = 'block';
+                setTimeout(() => {
+                    modal.style.transform = 'translate(-50%, -50%) scale(1)';
+                    modal.style.opacity = '1';
+                }, 10);
+            });
+        });
+
+        modal.addEventListener('click', () => {
+            modal.style.transform = 'translate(-50%, -50%) scale(0.1)';
+            modal.style.opacity = '0';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 500);
+        });
+
+        // Add event listener to show more info when work-step is clicked
+        const workSteps = document.querySelectorAll('.work-step');
+        const infoBox = document.createElement('div');
+
+        infoBox.style.display = 'none';
+        infoBox.style.position = 'absolute';
+        infoBox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        infoBox.style.padding = '10px';
+        infoBox.style.borderRadius = '8px';
+        infoBox.style.color = 'white';
+        infoBox.style.textAlign = 'center';
+        infoBox.style.zIndex = '50';
+
+        document.body.appendChild(infoBox);
+
+        workSteps.forEach(step => {
+            step.addEventListener('click', (event) => {
+                infoBox.innerHTML = step.getAttribute(`data-info-${document.documentElement.lang}`);
+                const rect = step.getBoundingClientRect();
+                infoBox.style.top = `${rect.top + window.scrollY - infoBox.offsetHeight}px`;
+                infoBox.style.left = `${rect.left + window.scrollX}px`;
+                infoBox.style.display = 'block';
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.work-step')) {
+                infoBox.style.display = 'none';
+            }
+        });
+
+        // Add glowing effect to footer when "reach out to us directly!" is clicked
+        const contactLink = document.getElementById('contact-link');
+        const footer = document.querySelector('footer');
+
+        contactLink.addEventListener('click', () => {
+            footer.classList.add('glow');
+            setTimeout(() => {
+                footer.classList.remove('glow');
+            }, 4000); // Adjust the duration as needed
+        });
+
+        // Add event listener to change language when language switcher is clicked
+        const languageSwitcher = document.querySelectorAll('.language-switcher a');
+        const elementsToTranslate = document.querySelectorAll('[data-lang-en]');
+
+        languageSwitcher.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const selectedLang = link.getAttribute('data-lang');
+                document.documentElement.lang = selectedLang;
+                elementsToTranslate.forEach(element => {
+                    element.innerHTML = element.getAttribute(`data-lang-${selectedLang}`);
+                });
+            });
+        });
+
+        // Add the splitting animation for company name
+        const companyName = document.querySelector('.company-name');
+        companyName.addEventListener('mouseenter', () => {
+            companyName.classList.add('split');
+        });
+        companyName.addEventListener('mouseleave', () => {
+            companyName.classList.remove('split');
+        });
+    </script>
+</body>
+</html>
