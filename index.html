@@ -150,6 +150,13 @@
     </footer>
     <p class="rights_reserved" data-lang-en="&copy; 2024 All Rights Reserved." data-lang-gr="&copy; 2024 Όλα τα δικαιώματα διατηρούνται.">&copy; 2024 All Rights Reserved.</p>
     <script>
+        // Remove #footer from the URL
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.location.hash) {
+            history.replaceState(null, document.title, window.location.pathname);
+            }
+        });
+
         // Add event listener to open images in a modal when clicked
         const galleryItems = document.querySelectorAll('.gallery-item img');
         const modal = document.createElement('div');
