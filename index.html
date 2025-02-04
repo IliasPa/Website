@@ -152,9 +152,19 @@
     <script>
         // Remove #footer from the URL
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.location.hash) {
-            history.replaceState(null, document.title, window.location.pathname);
+            document.getElementById("contact-link").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default jump to #footer
+            let footer = document.getElementById("footer"); // Get the footer element
+
+            if (footer) {
+                footer.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to footer
+
+                // Remove #footer from URL after scrolling
+                setTimeout(() => {
+                history.replaceState(null, document.title, window.location.pathname);
+                }, 500); // Small delay to allow scrolling animation
             }
+            });
         });
 
         // Add event listener to open images in a modal when clicked
