@@ -138,14 +138,20 @@ main {
 }
 
 .page-title {
-    font-size: 3.2rem;  
+    font-size: 3.2rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 1em 0 0.5em;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    background: linear-gradient(90deg, #82c4f0, #5b6cb2);
+    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     padding: 0 .7em;
+    will-change: transform;
+    contain: content;
+    text-rendering: optimizeLegibility;
 }
 
 .page-text {
