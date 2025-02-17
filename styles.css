@@ -1,13 +1,11 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    font-display: swap; /* Ensures fallback font appears instantly */
     margin: 0;
     padding: 0;
     background-color: #f0f8ff;
     overflow-x: hidden; /* Disables the vertical scrollbar */
 }
-
 
 /* Header Styles */
 header {
