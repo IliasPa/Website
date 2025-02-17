@@ -24,7 +24,6 @@ header {
 /* Container for the logo on the left */
 
 header .logo {
-    display: flex;
     height: 4em;
     width: auto;
     margin: .3em;
