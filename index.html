@@ -150,6 +150,31 @@
     </footer>
     <p class="rights_reserved" data-lang-en="&copy; 2024 All Rights Reserved." data-lang-gr="&copy; 2024 Όλα τα δικαιώματα διατηρούνται.">&copy; 2024 All Rights Reserved.</p>
     <script>
+        // Add this before any other scripts
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.addEventListener('load', () => {
+                            img.classList.add('loaded');
+                        });
+                        observer.unobserve(img);
+                    }
+                });
+            }, {
+                rootMargin: '50px 0px'
+            });
+
+            document.querySelectorAll('.gallery-item img').forEach(img => {
+                const src = img.src;
+                img.removeAttribute('src');
+                img.dataset.src = src;
+                imageObserver.observe(img);
+            });
+        });
+
         // Remove #footer from the URL
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("contact-link").addEventListener("click", function (event) {
