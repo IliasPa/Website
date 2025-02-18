@@ -5,38 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for responsive web design, ensures proper scaling on mobile devices -->
     <meta name="description" content="Professional 3D printing services in Greece. We bring your ideas to life with high-quality 3D printing solutions, prototyping, and custom manufacturing services.">
     <title>Home - Company</title>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="logo1'.png" type="image/png">
-
-    <!-- Critical CSS for LCP -->
-    <style>
-        .hero-title {
-            font-size: 3.2rem;
-            font-weight: bold;
-            margin: 1em 0 0.5em;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: #5b6cb2;
-            padding: 0 .7em;
-            contain: content;
-            content-visibility: auto;
-            contain-intrinsic-size: 1em 3.2rem;
-        }
-        
-        /* Apply gradient after initial paint */
-        .hero-title.enhanced {
-            background: linear-gradient(90deg, #82c4f0, #5b6cb2);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-
-    <!-- Preconnect to critical resources -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preload" href="logo2'.png" as="image">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css" />
 </head>
 <body>
     <!-- Main header with logo and company name -->
@@ -57,7 +29,7 @@
     <main>
         <section class="page-text">
             <!-- <h1 class="page-title">Your partner in bringing your ideas to life.</h1> -->
-            <h1 class="hero-title" data-lang-en="Print your Imagination" data-lang-el="Εκτυπωσε τη Φαντασια σου">Εκτυπωσε τη Φαντασια σου</h1>
+            <h1 class="page-title" data-lang-en="Print your Imagination" data-lang-el="Εκτυπωσε τη Φαντασια σου">Εκτυπωσε τη Φαντασια σου</h1>
             <p class="company-description" 
                 data-lang-en="We offer complete 3D printing solutions using advanced technology to bring your ideas to life. Whether you need a single prototype or a full production run, we guide you in choosing the right materials, refining your designs, and adding the perfect finishing touches." 
                 data-lang-el="Προσφέρουμε ολοκληρωμένες λύσεις 3D εκτύπωσης χρησιμοποιώντας προηγμένη τεχνολογία για να ζωντανέψουμε τις ιδέες σας. Είτε χρειάζεστε ένα μόνο πρωτότυπο είτε μια πλήρη σειρά παραγωγής, σας βοηθάμε να επιλέξετε τα κατάλληλα υλικά, να βελτιώσετε τα σχέδιά σας και να προσθέσετε τις ιδανικές τελικές πινελιές.">
@@ -331,38 +303,6 @@
         });
         companyName.addEventListener('mouseleave', () => {
             companyName.classList.remove('split');
-        });
-
-        // Enhance title after initial paint
-        document.addEventListener('DOMContentLoaded', () => {
-            requestAnimationFrame(() => {
-                document.querySelector('.hero-title').classList.add('enhanced');
-            });
-        });
-    </script>
-
-    <!-- Load non-critical resources -->
-    <script type="module">
-        // Dynamically load Font Awesome
-        const loadFA = () => {
-            const fa = document.createElement('link');
-            fa.rel = 'stylesheet';
-            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
-            document.head.appendChild(fa);
-        };
-
-        // Dynamically load flag icons
-        const loadFlags = () => {
-            const flags = document.createElement('link');
-            flags.rel = 'stylesheet';
-            flags.href = 'https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css';
-            document.head.appendChild(flags);
-        };
-
-        // Load non-critical resources after page load
-        window.addEventListener('load', () => {
-            loadFA();
-            loadFlags();
         });
     </script>
 </body>
