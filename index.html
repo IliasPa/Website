@@ -8,6 +8,35 @@
 <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="logo1'.png" type="image/png">
+
+    <!-- Critical CSS for LCP -->
+    <style>
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: bold;
+            margin: 1em 0 0.5em;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #5b6cb2;
+            padding: 0 .7em;
+            contain: content;
+            content-visibility: auto;
+            contain-intrinsic-size: 1em 3.2rem;
+        }
+        
+        /* Apply gradient after initial paint */
+        .hero-title.enhanced {
+            background: linear-gradient(90deg, #82c4f0, #5b6cb2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+    <!-- Preconnect to critical resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="logo2'.png" as="image">
 </head>
 <body>
     <!-- Main header with logo and company name -->
@@ -28,7 +57,7 @@
     <main>
         <section class="page-text">
             <!-- <h1 class="page-title">Your partner in bringing your ideas to life.</h1> -->
-            <h1 class="page-title" data-lang-en="Print your Imagination" data-lang-el="Εκτυπωσε τη Φαντασια σου">Εκτυπωσε τη Φαντασια σου</h1>
+            <h1 class="hero-title" data-lang-en="Print your Imagination" data-lang-el="Εκτυπωσε τη Φαντασια σου">Εκτυπωσε τη Φαντασια σου</h1>
             <p class="company-description" 
                 data-lang-en="We offer complete 3D printing solutions using advanced technology to bring your ideas to life. Whether you need a single prototype or a full production run, we guide you in choosing the right materials, refining your designs, and adding the perfect finishing touches." 
                 data-lang-el="Προσφέρουμε ολοκληρωμένες λύσεις 3D εκτύπωσης χρησιμοποιώντας προηγμένη τεχνολογία για να ζωντανέψουμε τις ιδέες σας. Είτε χρειάζεστε ένα μόνο πρωτότυπο είτε μια πλήρη σειρά παραγωγής, σας βοηθάμε να επιλέξετε τα κατάλληλα υλικά, να βελτιώσετε τα σχέδιά σας και να προσθέσετε τις ιδανικές τελικές πινελιές.">
@@ -302,6 +331,13 @@
         });
         companyName.addEventListener('mouseleave', () => {
             companyName.classList.remove('split');
+        });
+
+        // Enhance title after initial paint
+        document.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                document.querySelector('.hero-title').classList.add('enhanced');
+            });
         });
     </script>
 
