@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for responsive web design, ensures proper scaling on mobile devices -->
     <meta name="description" content="Professional 3D printing services in Greece. We bring your ideas to life with high-quality 3D printing solutions, prototyping, and custom manufacturing services.">
     <title>Home - Company</title>
-    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="logo1'.png" type="image/png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css" />
 </head>
 <body>
     <!-- Main header with logo and company name -->
@@ -303,6 +302,31 @@
         });
         companyName.addEventListener('mouseleave', () => {
             companyName.classList.remove('split');
+        });
+    </script>
+
+    <!-- Load non-critical resources -->
+    <script type="module">
+        // Dynamically load Font Awesome
+        const loadFA = () => {
+            const fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+            document.head.appendChild(fa);
+        };
+
+        // Dynamically load flag icons
+        const loadFlags = () => {
+            const flags = document.createElement('link');
+            flags.rel = 'stylesheet';
+            flags.href = 'https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css';
+            document.head.appendChild(flags);
+        };
+
+        // Load non-critical resources after page load
+        window.addEventListener('load', () => {
+            loadFA();
+            loadFlags();
         });
     </script>
 </body>
