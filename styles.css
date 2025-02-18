@@ -146,13 +146,17 @@ main {
     color: transparent;
 }
 
-.page-title {
-    font-size: 3.2rem;  
+/* Remove .page-title styles for hero and keep only for secondary titles */
+.page-title:not(.hero-title) {
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    letter-spacing: 1.5px;
+    letter-spacing:.5 1.5px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #82c4f0, #5b6cb2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     padding: 0 .7em;
 }
 
